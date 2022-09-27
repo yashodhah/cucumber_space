@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="settingsHandlerServiceI" name="SettingsHandlerServiceI"
+          class="com.dfn.at.common.services.SettingsHandlerService">
+    </bean>
+
+    <bean id="emailNotificationService" name="EmailNotificationService"
+          class="com.dfn.at.common.delivery.EmailNotificationService">
+    </bean>
+
+    <bean id="reportService" name="ReportService"
+          class="com.dfn.at.common.delivery.ReportService">
+    </bean>
+
+    <bean id="dbVerificationService" name="DBVerificationService"
+          class="com.dfn.at.common.services.DBVerificationService">
+    </bean>
+
+    <bean id="generalBottomButtonPanel" name="GeneralBottomButtonPanel" scope="prototype"
+          class="com.dfn.at.core.pages.common.GeneralBottomButtonPanel">
+    </bean>
+
+    <bean id="dynamicBottomButtonPanel" name="DynamicBottomButtonPanel" scope="prototype"
+          class="com.dfn.at.core.pages.common.DynamicBottomButtonPanel">
+    </bean>
+
+    <bean id="dataViewGridPage" name="DataViewGridPage" scope="prototype"
+          class="com.dfn.at.core.pages.common.DataViewGridPage">
+    </bean>
+
+    <bean id="gridPage" name="GridPage"
+          class="com.dfn.at.core.pages.common.GridPage" scope="prototype">
+        <constructor-arg index="0" value=""/>
+        <constructor-arg index="1" value=""/>
+    </bean>
+
+    <bean id="homePage" name="HomePage" scope="prototype"
+          class="com.dfn.at.core.pages.HomePage">
+    </bean>
+
+    <bean id="priceQtyFactorPage" name="PriceQtyFactorPage"
+          class="com.dfn.at.core.pages.master_data.symbol_management.PriceQtyFactorPage">
+        <constructor-arg index="0" ref="dynamicBottomButtonPanel"/>
+    </bean>
+
+    <bean id="titlePage" name="TitlePage"
+          class="com.dfn.at.core.pages.master_data.customer.TitlePage">
+        <constructor-arg index="0" ref="dynamicBottomButtonPanel"/>
+    </bean>
+    <bean id="maritalStatusPage" name="MaritalStatusPage"
+          class="com.dfn.at.core.pages.master_data.customer.MaritalStatusPage">
+        <constructor-arg index="0" ref="dynamicBottomButtonPanel"/>
+    </bean>
+
+    <bean id="countryPage" name="CountryPage"
+          class="com.dfn.at.core.pages.master_data.country.CountryPage">
+        <constructor-arg index="0" ref="generalBottomButtonPanel"/>
+    </bean>
+
+    <bean id="cityPage" name="CityPage"
+          class="com.dfn.at.core.pages.master_data.country.CityPage">
+        <constructor-arg index="0" ref="generalBottomButtonPanel"/>
+        <property name="dataViewGridPage" ref="DataViewGridPage"/>
+    </bean>
+
+    <bean id="userPage" name="UserPage"
+          class="com.dfn.at.core.pages.user.UserPage">
+    </bean>
+
+    <bean id="userAuthenticationPage" name="UserAuthenticationPage"
+          class="com.dfn.at.core.pages.user.UserAuthenticationPage">
+    </bean>
+
+    <bean id="symbolPage" name="SymbolPage"
+          class="com.dfn.at.core.pages.master_data.symbol_management.SymbolPage">
+        <constructor-arg value="symbols"/>
+    </bean>
+</beans>

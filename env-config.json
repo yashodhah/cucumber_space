@@ -1,0 +1,15 @@
+{
+  "url": "http://localhost:4200/",
+  "title": "DirectFN AT Core",
+  "browser": "Chrome",
+  "headless": false,
+  "databaseConfiguration": {
+    "driver": "oracle.jdbc.driver.OracleDriver",
+    "url": "jdbc:oracle:thin:@//192.168.14.247:1529/DVNTPCOR",
+    "user": "dfn_ntp",
+    "password": "password"
+  },
+  "defaultData": {
+    "customerId": 1
+  }
+}

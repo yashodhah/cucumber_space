@@ -1,0 +1,9 @@
+.idea
+*.iml
+*.ipr
+*.iws
+/CRMExtentResults
+/target
+/test-output
+/Screenshots
+/WebDrivers
